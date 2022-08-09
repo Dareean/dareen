@@ -20,20 +20,45 @@
     <header class="parallax-window" data-parallax="scroll" data-image-src="images/fotostasiun.png">
         <nav>
             <h1 class="logo">
-                <a class="/">RENN</a>
+                <a class="/"><span>RENN</span></a>
             </h1>
-            
         </nav>
-        <div class="header-title">Dareean Ahmad Raffi Mardin.</div>
+        <div class="header-title">
+            <a href="#about1" class="header-title">Dareean Ahmad Raffi Mardin.</a>
+        </div>
         <div class="header-bottom">
             <p class="today-date">05 <span>/ 08</span></p>
             <ul class="social-media">
-                <li><a href="https://www.instagram.com/darenrafi/">Instagram</a></li>
-                <li><a href="https://web.facebook.com/dareean.mardin/">Facebook</a></li>
-                <li><a href="https://dareean.github.io/">My Other Web!</a></li>
+                <li><a href="#features">Links</a></li>
+                <li><a href="#about">Gallery</a></li>
+                <li><a href="#about1">About Me</a></li>
             </ul>
         </div>
     </header>
+
+    <!--  Features  -->
+    <section class="features" id="features">
+        <div class="box-feature">
+            <div class="box">
+                <img src="ig.png" alt="" width="45px">
+                <h3>Instagram</h3>
+                <p>@darenrafi </p>
+                <a href="https://www.instagram.com/darenrafi/" class="btn">Click Here</a>
+            </div>
+            <div class="box">
+                <img src="fb.png" alt="" width="50px">
+                <h3>Facebook</h3>
+                <p>Darean A. Raffi Mardin </p>
+                <a href="https://web.facebook.com/dareean.mardin/" class="btn">Click Here</a>
+            </div>
+            <div class="box">
+                <img src="SAO.png" alt="" width="100px">
+                <h3>My Other Web!</h3>
+                <p>What is <b>Sword Art Online?</b></p>
+                <a href="https://dareean.github.io/" class="btn">Click Here</a>
+            </div>
+       </div>
+    </section>
 
     <!-- About -->
     <section id="about">
@@ -68,6 +93,10 @@
                     <h2 class="tks">N</h2>
                  </div>
             </div>
+        </div>
+    </section>
+    <section id="about1">
+        <div class="about-container1">
             <div class="about-info">
                 こんにちは 私の名前はラフィですが、時々人々は私をダリアンと呼びます。ようこそ私のページへ。
                 私は2006年にインドネシアのスラウェシ島中心部のパル市で生まれました。私は今、マランの高校生です。
@@ -83,10 +112,24 @@
                 I was born in Palu city center sulawesi Indonesia in 2006. I'm now an high School student in Malang. 
                 Now i'm learning how to code a website and more!. by the way, If you need anything from me feel free to contact me!.
              </div><br>
-        </div>
+        </div>     
     </section>
 
     <!-- Footer -->
     <footer>Emulated by  <i class="fa fa-heart"></i>  Daren Rafi</footer>
+
+    <!-- Script -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzSPwk2Kb981uXJd8j2fLK7cYvkZ7LqJC2I4I9ZSPzxUS2PCVlU3QKavpSj1w244yvS/exec'
+        const form = document.forms['wpu-contact-form'];
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      <script src="script.js"></script>
   </body>
 </html>
