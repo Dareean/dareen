@@ -251,6 +251,12 @@ footer i {
     color: #ff2929;
 }
 
+footer .nav1 {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
 @media only screen and (max-width: 950px) {
     .about-container {
         width: 90%;
